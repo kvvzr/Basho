@@ -1,7 +1,7 @@
 Basho basho;
 
 float a = 0;
-float[][] b = new float[3][2];
+float[][] b = new float[2][2];
 
 void setup(){
   size(400, 400);

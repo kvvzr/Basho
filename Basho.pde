@@ -411,11 +411,11 @@ public class ArrayValue extends Value {
     if (Array.get(object, 0).getClass().isArray()){
       return countMaxLength(Array.get(object, 0), depth + 1) * Array.getLength(object);
     }
-      return Array.getLength(object);
+    return Array.getLength(object);
   }
   
   private void drawFrame(Graphics g, int lx, int ly, int panelWidth){
-    for(int i = 0; i < dimention; i++){
+    for(int i = 0; i < dimention - 1; i++){
       Graphics2D g2 = (Graphics2D)g;
       g2.setColor(Color.getHSBColor((float)i / dimention, 0.5f, 1.0f));
       g2.setStroke(new BasicStroke(2.0f));
@@ -425,15 +425,15 @@ public class ArrayValue extends Value {
       for (int j = i + 1; j < dimention; j++){
         sum *= lenCount[j];
       }
-      //println(i + " " + sum);
+      
       for(int j = 0; j < prevRowCount + 1; j++){
         if (j % sum == 0){
           sizeCount[j]++;
         }
       }
-      //println(i+" " + sum);
-      for(int j = 0; j < prevRowCount / size; j++){
-        //g2.drawRect(lx + i * 2 + 1, ly + size * rowHeight * j + sizeCount[j * sum] * 2 - 1, panelWidth - i * 4 - 2, size * rowHeight - (sizeCount[j * sum] + sizeCount[j * sum + 1] - 2) * 2 - 2);
+      
+      for(int j = 0; j < prevRowCount / sum; j++){
+        g2.drawRect(lx + i * 2 + 1, ly + sum * rowHeight * j + sizeCount[j * sum] * 2 - 1, panelWidth - i * 4 - 2, sum * rowHeight - (sizeCount[j * sum] + sizeCount[(j + 1) * sum]) * 2 + 2);
       }
       
       g2.setStroke(new BasicStroke(1.0f));
