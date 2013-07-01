@@ -431,7 +431,7 @@ public class ArrayValue extends Value {
           sizeCount[j]++;
         }
       }
-      println(i+" " + sum);
+      //println(i+" " + sum);
       for(int j = 0; j < prevRowCount / size; j++){
         //g2.drawRect(lx + i * 2 + 1, ly + size * rowHeight * j + sizeCount[j * sum] * 2 - 1, panelWidth - i * 4 - 2, size * rowHeight - (sizeCount[j * sum] + sizeCount[j * sum + 1] - 2) * 2 - 2);
       }
