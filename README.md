@@ -9,4 +9,4 @@
 * その他いろいろ
 
 ## 導入方法
-* http://www.youtube.com/watch?v=CpH4BKEIb_U
+* http://www.youtube.com/watch?v=8Z23xNN7IGU
