@@ -1,11 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.List;
-import java.awt.event.AdjustmentEvent;
-import java.awt.event.AdjustmentListener;
-import java.lang.reflect.Field;
-import java.lang.reflect.Array;
-import java.awt.FontMetrics;
+import java.awt.event.*;
+import java.lang.reflect.*;
 
 String[] showTypes = {"Integer", "Float", "Double", "Long", "Boolean", "String"};
 int rowHeight = 30;
